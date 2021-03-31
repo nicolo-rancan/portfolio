@@ -1,0 +1,287 @@
+$orange: #f6df99;
+$black: #24292e;
+
+@font-face {
+  font-family: "Alliance-b";
+  src: url("../resources/fonts/Alliance-No-1-Bold.woff");
+}
+
+@font-face {
+  font-family: "Alliance-r";
+  src: url("../resources/fonts/Alliance-No-1-Regular.woff");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Alliance-r", cursive;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  .navbar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    .name {
+      margin: 0.35em 0.65em;
+      display: inline-block;
+      h3 {
+        filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+        font-size: 1.3rem;
+        color: $black;
+      }
+    }
+    .links {
+      display: inline-block;
+      margin: 0.35em 0.65em;
+      margin-left: 1.25em;
+
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          p {
+            padding: 0.15em 0.5em 0 0.5em;
+            cursor: pointer;
+            color: $black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    z-index: 10;
+    position: relative;
+    .row {
+      width: 100%;
+      .content {
+        position: relative;
+        z-index: 30;
+        margin: 0;
+        background: white;
+        height: auto;
+
+        .pic {
+          margin: 8em auto 0 auto;
+          border-radius: 999px;
+          width: 75px;
+          height: 75px;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
+          background-image: url("../resources/images/profile_edit.jpg");
+        }
+
+        h1 {
+          font-family: "Alliance-b";
+          text-align: center;
+          margin: 0.5em auto;
+          font-size: 2.75rem;
+          color: $black;
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+        }
+        .div {
+          box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
+          height: 125px;
+          width: 3px;
+          background-color: $black;
+          margin: 0 auto;
+        }
+
+        p {
+          line-height: 1.5rem;
+          text-align: center;
+          margin: 1.5em auto;
+          font-size: 1.15rem;
+          max-width: 500px;
+          color: $black;
+        }
+
+        .contact-icons {
+          display: flex;
+          a {
+            width: 25px;
+            margin: auto 0.4em;
+            img {
+              width: 25px;
+              margin: auto 0.4em;
+              &:first-child {
+                margin-left: auto;
+              }
+              &:last-child {
+                margin-right: auto;
+              }
+            }
+
+            &:first-child {
+              margin-left: auto;
+            }
+            &:last-child {
+              margin-right: auto;
+            }
+          }
+        }
+
+        .intestation {
+          display: flex;
+          flex-direction: column;
+          h2 {
+            font-size: 1.6rem;
+            margin: 0 auto;
+            color: $black;
+          }
+          p {
+            line-height: 1.35rem;
+            text-align: center;
+            margin: 1.5em auto;
+            font-size: 1rem;
+            max-width: 750px;
+            color: $black;
+          }
+
+          .sub-intestation {
+            margin: 0 auto;
+            display: flex;
+            img {
+              margin: auto 0.5em;
+              &:first-child {
+                margin-left: auto;
+              }
+              &:last-child {
+                margin-right: auto;
+              }
+            }
+          }
+        }
+
+        @import "projects";
+
+        .inline {
+          display: flex;
+          .left {
+            width: 500px;
+            margin-top: 4em;
+            margin-left: auto;
+            margin-right: 2em;
+            display: flex;
+            img {
+              box-shadow: 0 0 24px 2px rgba(0, 0, 0, 0.4);
+              width: 300px;
+              margin: 0 0 auto auto;
+            }
+          }
+          .right {
+            width: 500px;
+            margin-top: 4em;
+            margin-right: auto;
+            margin-left: 2em;
+            display: flex;
+            flex-direction: column;
+            h4 {
+              font-size: 1.35rem;
+              margin: 0 auto 0 0;
+              text-align: left;
+            }
+            p {
+              font-size: 1.15rem;
+              line-height: 1.5rem;
+              margin: 1em auto auto 0;
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      .wave {
+        position: relative;
+        z-index: 20;
+        background-color: $orange;
+        margin: 0;
+        width: 100%;
+        svg {
+          fill: white;
+          filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
+          width: 100%;
+        }
+      }
+
+      .oppos {
+        background-color: $orange;
+      }
+
+      .reverse {
+        transform: rotate(180deg);
+      }
+
+      &:first-child {
+        .section {
+          height: 100vh;
+        }
+      }
+    }
+
+    #knowledges {
+      .content {
+        display: flex;
+        flex-direction: column;
+        .intestation {
+          h2 {
+            text-align: center;
+            margin: 0 auto;
+          }
+          p {
+            text-align: center;
+            max-width: 650px;
+          }
+          .sub-intestation {
+            margin: 0.5em auto 5em auto;
+          }
+        }
+        @import "./knowledges";
+      }
+    }
+
+    #contacts {
+      .content {
+        min-height: 5vh;
+        .sub-content {
+          .social {
+            display: flex;
+            flex-direction: column;
+            margin: 3em 1em;
+            a {
+              margin: auto auto 0.5em auto;
+              img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            p {
+              font-size: 1rem;
+              margin: 0 auto auto auto;
+            }
+
+            &:first-child {
+              margin-left: auto;
+            }
+            &:last-child {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

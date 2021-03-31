@@ -1,0 +1,117 @@
+#knowledges-panel {
+  overflow: auto;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bar-cnt {
+    transform: translateX(200px);
+    opacity: 0;
+    height: 35px;
+    display: flex;
+    width: 600px;
+    margin: 2em auto;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+    .bar-name {
+      background-color: #24292e;
+      width: 100px;
+      display: flex;
+      p {
+        line-height: 1rem;
+        color: white;
+        font-size: 15px;
+        margin: auto auto auto 0.4em;
+      }
+    }
+    .bar-outer {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      .bar-percent {
+        background-color: #ebc553;
+      }
+      .bar-empty {
+        background-color: #f6df99;
+      }
+    }
+  }
+
+  /*.section {
+    margin: 4em auto 4em auto;
+    width: 675px;
+    display: flex;
+
+    .inner {
+      width: 600px;
+      padding: 2em 1em;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      border-radius: 15px;
+      box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        max-width: 250px;
+        margin: 0 auto 0.5em auto;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      .sub-icon {
+        margin: 0 auto 0.5em auto;
+        width: 150px;
+        display: flex;
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .progress {
+        margin: 0 auto 1.25em auto;
+        width: 600px;
+        display: flex;
+        position: relative;
+        .bar-outer {
+          margin: 0 auto;
+          width: 300px;
+          height: 20px;
+          //border-radius: 999px;
+          overflow: hidden;
+          display: flex;
+          border: 1px solid rgb(224, 224, 224);
+          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+          .bar-inner-full {
+            height: 100%;
+            overflow: none;
+            height: auto;
+            p {
+              margin: auto 0 auto auto;
+              text-align: center;
+              color: white;
+              display: inline-block;
+            }
+          }
+          .bar-inner-empty {
+            height: 100%;
+          }
+        }
+        span {
+          margin: auto auto auto 0.25em;
+          font-size: 1rem;
+        }
+      }
+      p {
+        text-align: center;
+        margin: 0 auto 0.5em auto;
+        flex: 1;
+        max-width: 500px;
+        font-size: 1rem;
+      }
+    }
+  }*/
+
+  .left {
+    transform: translateX(-200px);
+  }
+}

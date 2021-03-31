@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Rancan Nicolò" />
+  <title>Home - Nicolò Rancan portfolio</title>
+
+  <link rel="stylesheet" href="/style/home.css">
+</head>
+
+<body onload="setUnderlineaturePosition('#link_<%= locals.section %>'); scrollIntoView('<%= locals.section %>')">
+  <div class="navbar">
+    <div class="name">
+      <h3 id="name">Nicolò</h3>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <p id="link_home">Home</p>
+        </li>
+        <li>
+          <p id="link_about">About</p>
+        </li>
+        <li>
+          <p id="link_knowledges">Knowledges</p>
+        </li>
+        <li>
+          <p id="link_projects">Projects</p>
+        </li>
+        <li>
+          <p id="link_contacts">Contacts</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-content">
+    <!-- HOME -->
+    <div class="row" id="home">
+      <div class="content">
+        <div class="pic"></div>
+        <h1>Nicolò<br>Rancan</h1>
+        <dir class="div"></dir>
+        <p>I design, code and deploy modern full stack web applications for everyone.</p>
+        <div class="contact-icons">
+          <a target="_blank" href="https://github.com/rancan-nicolo"><img
+              src="https://img.icons8.com/material-outlined/96/000000/github.png" /></a>
+          <a target="_blank" href="https://twitter.com/rnc_nicolo"><img
+              src="https://img.icons8.com/android/96/000000/twitter.png" /></a>
+          <a target="_blank" href="https://www.linkedin.com/in/nicol%C3%B2-rancan-055231208/"><img
+              src="https://img.icons8.com/android/96/000000/linkedin.png" /></a>
+          <a target="_blank" href="https://www.instagram.com/rancan_nicolo/"><img
+              src="https://img.icons8.com/material/96/000000/instagram-new--v1.png" /></a>
+          <a target="_blank" href="mailto:nicolo.rancan.gm@gmail.com"><img
+              src="https://img.icons8.com/material/96/000000/important-mail.png" /></a>
+        </div>
+      </div>
+      <div class="wave">
+        <%- include("partials/wave1"); %>
+      </div>
+    </div>
+    <!-- ABOUT -->
+    <div class="row" id="about">
+      <div class="content oppos">
+        <div class="intestation">
+          <h2>ABOUT ME</h2>
+        </div>
+        <div class="sub-content inline">
+          <div class="left">
+            <img src="/resources/images/profile_edit.jpg" alt="profile_edit.jpg">
+          </div>
+          <div class="right">
+            <h4>Hi, I am Nicolò</h4>
+            <p>
+              an 18 years old full-stack web developer, pizza chef and an amatorial pianist.
+              <br />
+              <br />
+              I love coding full stack web applications that have modern and interactive UIs.
+              <br />
+              <br />
+              I am currently studing Information Technologies at ITI Marzotto in Italy (VI), where i have
+              partecipated in various IT related projects, such as the Linux Day.
+              <br />
+              <br />
+              The programming language that I use the most is JavaScript, because it allows me to play with
+              everything in the page such as creating custom animations, create thigs that can be interactive for a
+              visitor,
+              and serving dynamic content to the user.
+              I use it too in the back-end, since it allows more options for future scaling and optimization.
+              <br />
+              <br />
+              Other things that I can do are SEO management, app deployment and maintenece, simple design of
+              illustrations
+              and photo editing.
+              <br />
+              <br />
+              Some of my projectes are available in the project section.
+              <br />
+              <br />
+              I am always open to new challenges and opportunities, and I hope we will get in touch soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- KNOWLEDGES -->
+    <div class="row" id="knowledges">
+      <div class="wave reverse">
+        <%- include("partials/wave3"); %>
+      </div>
+      <div class="content">
+        <div class="intestation">
+          <h2>MY KNOWLEDGES</h2>
+          <p>Those are some of my knowledges that I have decided to expose. The orange bars, indicates a self assesment
+            of my understanding of the language. If you want to know more about my knowledges, please contact me.</p>
+          <div class="sub-intestation">
+            <img title="HTML5" src="https://img.icons8.com/color/48/000000/html-5.png" />
+            <img title="CSS" src="https://img.icons8.com/color/48/000000/css3.png" />
+            <img title="JavaScript" src="https://img.icons8.com/color/48/000000/javascript.png" />
+            <img title="React" src="https://img.icons8.com/color/48/000000/react-native.png" />
+            <img title="Git" src="https://img.icons8.com/color/48/000000/git.png" />
+            <img title="NodeJS" src="https://img.icons8.com/color/48/000000/nodejs.png" />
+            <img title="C#" src="https://img.icons8.com/color/48/000000/c-sharp-logo.png" />
+          </div>
+        </div>
+        <div id="knowledges-panel" class="sub-content inline">
+        </div>
+      </div>
+      <div class="wave">
+        <%- include("partials/wave3"); %>
+      </div>
+    </div>
+    <!-- PROJECTS -->
+    <div class="row" id="projects">
+      <div class="content oppos">
+        <div class="intestation">
+          <h2>MY PROJECTS</h2>
+        </div>
+
+        <div id="projects-panel" class="sub-content inline">
+          <div class="project">
+            <div class="left">
+              <div class="desc">
+                <h3>OverLegend Network</h3>
+                <p>OverLegend is a minecraft network, for wich I have created this website that connect multiple
+                  platforms, like Discord and Minecraft. I have coded everything, from the front-end, to the back-end
+                  and configured the host machine.</p>
+                <a target="_blank" href="https://overlegend.it">Visit</a>
+              </div>
+              <div class="tags">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Ejs</p>
+                <p>Node.JS</p>
+                <p>MySql</p>
+              </div>
+            </div>
+            <div class="right">
+              <img src="/resources/images/ol-2.png" alt="overlegend.png">
+            </div>
+          </div>
+          <di class="project swapped">
+            <div class="left">
+              <div class="desc">
+                <h3>Gamers ITA Community</h3>
+                <p>Gamers ITA Community, is the biggest italian Discord multigaming, that count more than 11.000
+                  players. The website is a blog and an advanced events planner. I have coded everything, from the
+                  front-end, to the back-end and configured the host machine.</p>
+              </div>
+              <div class="tags">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Node.JS</p>
+                <p>MongoDB</p>
+              </div>
+            </div>
+            <div class="right">
+              <img src="/resources/images/gi-1.png" alt="gamersita.png">
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACTS -->
+    <div class="row" id="contacts">
+      <div class="wave reverse">
+        <%- include("partials/wave1"); %>
+      </div>
+      <div class="content">
+        <div class="intestation">
+          <h2>CONTACT ME</h2>
+        </div>
+        <div class="sub-content inline">
+          <div class="social">
+            <a target="_blank" href="https://github.com/rancan-nicolo"><img
+                src="https://img.icons8.com/material-outlined/96/000000/github.png" /></a>
+            <p>GitHub</p>
+          </div>
+          <div class="social">
+            <a target="_blank" href="https://twitter.com/rnc_nicolo"><img
+                src="https://img.icons8.com/android/96/000000/twitter.png" /></a>
+            <p>Twitter</p>
+          </div>
+          <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/nicol%C3%B2-rancan-055231208/"><img
+                src="https://img.icons8.com/android/96/000000/linkedin.png" /></a>
+            <p>Linkedin</p>
+          </div>
+          <div class="social">
+            <a target="_blank" href="https://www.instagram.com/rancan_nicolo/"><img
+                src="https://img.icons8.com/material/96/000000/instagram-new--v1.png" /></a>
+            <p>Instagram</p>
+          </div>
+          <div class="social">
+            <a target="_blank" href="mailto:nicolo.rancan.gm@gmail.com"><img
+                src="https://img.icons8.com/material/96/000000/important-mail.png" /></a>
+            <p>Mail</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/script/utilities.js"></script>
+  <script src="/script/sketch.js"></script>
+</body>
+
+</html>
