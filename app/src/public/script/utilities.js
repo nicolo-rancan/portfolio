@@ -89,6 +89,11 @@ linkIds.forEach(i => {
   });
 
   document.getElementById(i).addEventListener("click", () => {
+
+    if (window.innerWidth <= 600 && document.querySelector(".links").classList.contains("visible")) {
+      document.querySelector(".links").classList.toggle("visible");
+    }
+
     window.history.replaceState("object or string", "Title", `/${i.split("_")[1]}`);
     setUnderlineaturePosition(`#link_${i.split("_")[1]}`);
     scrollIntoView(`${i.split("_")[1]}`);
@@ -98,50 +103,18 @@ linkIds.forEach(i => {
   });
 });
 
+function toggleMenu() {
+  if (window.innerWidth <= 600) {
+    let cnt = document.querySelector(".links");
+    cnt.classList.toggle("visible");
+  }
+}
+
 window.onload = () => {
   activeLink = `#link_${window.location.pathname.split("/").pop()}`;
   setUnderlineaturePosition(activeLink);
   scrollIntoView(window.location.pathname.split("/").pop());
   updateTitle();
-
-  /*for (let i = 0; i < projects.length; i++) {
-
-    let section = document.createElement("div");
-    section.className = "section";
-
-    let inner = document.createElement("div");
-    inner.className = "inner";
-
-    let absImage = document.createElement("div");
-    absImage.className = "absImage";
-    absImage.style.backgroundImage = `url("${projects[i].gallery[0]}")`;
-
-    let absContent = document.createElement("div");
-    absContent.className = "absContent";
-
-    let title = document.createElement("h3");
-    title.innerText = projects[i].title;
-
-    let description = document.createElement("p");
-    description.innerText = projects[i].description;
-
-    let date = document.createElement("p");
-    date.innerText = projects[i].date;
-    date.className = "date";
-
-
-    absContent.appendChild(title);
-    absContent.appendChild(date);
-    absContent.appendChild(description);
-
-    inner.appendChild(absImage);
-    inner.appendChild(absContent);
-
-    section.appendChild(inner);
-
-    document.getElementById("projects-panel").appendChild(section);
-    
-  }*/
 
   let sw = false;
 
@@ -180,63 +153,7 @@ window.onload = () => {
     barCnt.appendChild(barOuter);
 
     document.getElementById("knowledges-panel").appendChild(barCnt);
-
-
-    /*let section = document.createElement("div");
-    section.className = "section";
-
-    let inner = document.createElement("div");
-    inner.className = "inner";
-
-    let title = document.createElement("h3");
-    title.innerText = knowledges[i].title;
-
-    let subIcon = document.createElement("div");
-    subIcon.className = "sub-icon";
-
-    let icon = document.createElement("img");
-    icon.src = knowledges[i].imagePath;
-
-    let progress = document.createElement("div");
-    progress.className = "progress";
-
-    let barOuter = document.createElement("div");
-    barOuter.className = "bar-outer";
-
-    let barInnerFull = document.createElement("div");
-    barInnerFull.className = "bar-inner-full";
-    barInnerFull.style.backgroundColor = knowledges[i].colorCode;
-    barInnerFull.style.width = `${knowledges[i].percentage}%`;
-
-    let percentage = document.createElement("p");
-    percentage.innerText = knowledges[i].percentage + "%";
-
-    let barInnerEmpty = document.createElement("div");
-    barInnerEmpty.className = "bar-inner-empty";
-    barInnerEmpty.style.width = "0%";
-    barInnerEmpty.style.width = `${100 - knowledges[i].percentage}%`;
-    barInnerEmpty.style.transition = "3s";
-
-
-    let description = document.createElement("p");
-    description.innerText = knowledges[i].description;
-
-    subIcon.appendChild(icon);
-
-    barInnerFull.appendChild(percentage);
-    barOuter.appendChild(barInnerFull);
-    barOuter.appendChild(barInnerEmpty);
-    progress.appendChild(barOuter);
-
-    inner.appendChild(title);
-    inner.appendChild(subIcon);
-    inner.appendChild(progress);
-    inner.appendChild(description);
-
-    section.appendChild(inner);
-*/
   }
-
 }
 
 
