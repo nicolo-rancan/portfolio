@@ -174,7 +174,7 @@ function setUnderlineaturePosition(elemId) {
   }
 
   underlineature.id = "underlineature";
-  underlineature.style.position = "absolute";
+  //underlineature.style.position = "absolute";
   underlineature.style.width = elemLength + "px";
   underlineature.style.height = "2px";
   underlineature.style.backgroundColor = "black";
@@ -203,6 +203,18 @@ window.addEventListener("scroll", () => {
       document.getElementsByClassName("bar-cnt")[i].style.transform = "translateX(0)";
       document.getElementsByClassName("bar-cnt")[i].style.opacity = "1";
     }
+  }
+});
+
+let iDontKnowHowToCallThis = false;
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 600)
+    iDontKnowHowToCallThis = true;
+  else if (iDontKnowHowToCallThis == true)
+  {
+    iDontKnowHowToCallThis = false;
+    let url = window.location.pathname.split("/").pop();
+    setUnderlineaturePosition("#link_" + url);
   }
 });
 
